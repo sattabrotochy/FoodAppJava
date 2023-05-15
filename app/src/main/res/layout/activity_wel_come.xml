@@ -34,7 +34,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/registration_btn"
         android:layout_width="334dp"
         android:layout_height="50dp"
         android:layout_marginBottom="124dp"

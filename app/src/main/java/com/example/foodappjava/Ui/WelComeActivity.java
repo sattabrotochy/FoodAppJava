@@ -23,7 +23,7 @@ public class WelComeActivity extends AppCompatActivity {
         registration_btn=findViewById(R.id.registration_btn);
 
         registration_btn.setOnClickListener(view -> {
-            Intent intent=new Intent(getApplicationContext(),RegistrationActivity.class);
+            Intent intent=new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
         });
     }

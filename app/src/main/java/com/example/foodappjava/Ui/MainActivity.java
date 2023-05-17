@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         barDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.Open_Drawer,R.string.Close_Drawer);
         drawerLayout.addDrawerListener(barDrawerToggle);
         barDrawerToggle.syncState();
+        loadFragment(new HomeFragment());
     }
 
     @Override

@@ -97,10 +97,11 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="#cccccc"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawableLeft="@drawable/baseline_password_24"
         android:drawablePadding="13sp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="Password"
+
         android:textColor="#ffffff"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,6 +114,7 @@
     <Button
         android:id="@+id/registration_btn"
         android:layout_width="334dp"
+        android:onClick="userRegistration"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/btn_bg"
@@ -133,17 +135,20 @@
         android:textColor="#FBFBFB"
         android:textSize="17sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registration_btn"
-        tools:ignore="HardcodedText,MissingConstraints"
-        tools:layout_editor_absoluteX="135dp" />
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/signIn_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text=" Sign In"
         android:textColor="#F87272"
+        android:onClick="userSignIn"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView4"

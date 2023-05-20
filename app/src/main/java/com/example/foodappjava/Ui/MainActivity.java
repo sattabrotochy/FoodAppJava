@@ -37,29 +37,26 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id=item.getItemId();
-                if(id==R.id.home){
-                    loadFragment(new HomeFragment());
-                    Toast.makeText(getApplicationContext(), "Home", Toast.LENGTH_SHORT).show();
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id=item.getItemId();
+            if(id==R.id.home){
+                loadFragment(new HomeFragment());
+                Toast.makeText(getApplicationContext(), "Home", Toast.LENGTH_SHORT).show();
 
-                } else if (id == R.id.dailyMeal) {
-                    loadFragment(new DailyMealFragment());
-                } else if (id == R.id.favourite) {
-                    loadFragment(new FavouriteFragment());
-                }else if (id == R.id.My_Order) {
-                    //loadFragment(new Homeragment());
-                }else  {
-                   // loadFragment(new Homeragment());
-                }
-
-
-                drawerLayout.closeDrawer(GravityCompat.START);
-
-                return true;
+            } else if (id == R.id.dailyMeal) {
+                loadFragment(new DailyMealFragment());
+            } else if (id == R.id.favourite) {
+                loadFragment(new FavouriteFragment());
+            }else if (id == R.id.My_Order) {
+                loadFragment(new HomeFragment());
+            }else  {
+               loadFragment(new HomeFragment());
             }
+
+
+            drawerLayout.closeDrawer(GravityCompat.START);
+
+            return true;
         });
 
 
